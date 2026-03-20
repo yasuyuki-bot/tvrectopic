@@ -1,0 +1,806 @@
+2026-03-11 22:16:51,912 - 338711 - MainProcess - INFO - EPG/Topic Update Loop started (PID: 338711)
+2026-03-11 22:16:51,912 - 338711 - MainProcess - INFO - Recording Scheduler started
+2026-03-11 22:18:10,486 - 338711 - MainProcess - INFO - Detected local IP for external access: 192.168.0.3
+2026-03-11 22:18:12,471 - 338711 - MainProcess - INFO - VIDEO_REQUEST: POST /api/video/status/h7yxl9gcu from 192.168.0.2
+2026-03-11 22:18:12,476 - 338711 - MainProcess - INFO - DEBUG_BUFFER: session=h7yxl9gcu, ahead=0
+2026-03-11 22:18:13,299 - 338711 - MainProcess - INFO - VIDEO_REQUEST: GET /api/video/17 from 192.168.0.2
+2026-03-11 22:18:13,325 - 338711 - MainProcess - INFO - VIDEO_STREAM_REQ: ID=17, start=3224.322, end=0.0, format=None, session_id=h7yxl9gcu
+2026-03-11 22:18:13,326 - 338711 - MainProcess - INFO - DB_RESOLVE: Program 17 -> /media/HDD2T/video_2T/pt2/topic/MBS毎日放送_映像’26【再】【字】「弾薬庫が増える町」_202603090150-202603090250.ts
+2026-03-11 22:18:13,326 - 338711 - MainProcess - INFO - FINAL_PATH: /media/HDD2T/video_2T/pt2/topic/MBS毎日放送_映像’26【再】【字】「弾薬庫が増える町」_202603090150-202603090250.ts
+2026-03-11 22:18:13,326 - 338711 - MainProcess - DEBUG - Using MPEG-TS configuration for program 17
+2026-03-11 22:18:13,328 - 338711 - MainProcess - DEBUG - Adaptive streaming enabled for 17.
+2026-03-11 22:18:13,329 - 338711 - MainProcess - INFO - DEBUG_LOOP: Starting iterfile for session=h7yxl9gcu
+2026-03-11 22:18:13,329 - 338711 - MainProcess - DEBUG - Launching FFmpeg (async): /usr/bin/ffmpeg -hide_banner -nostdin -y -loglevel warning -probesize 10M -analyzeduration 5M -fflags +genpts+igndts+discardcorrupt -err_detect ignore_err -max_interleave_delta 10M -init_hw_device qsv=qsv:hw_any,child_device=/dev/dri/renderD128 -filter_hw_device qsv -ss 3224.322 -thread_queue_size 4096 -i /media/HDD2T/video_2T/pt2/topic/MBS毎日放送_映像’26【再】【字】「弾薬庫が増える町」_202603090150-202603090250.ts -g 60 -avoid_negative_ts make_zero -muxdelay 0 -map 0:0 -map 0:1 -af aresample=async=1 -ac 2 -ar 48000 -max_muxing_queue_size 8192 -vf yadif,format=nv12 -c:v h264_qsv -preset slow -global_quality 18 -look_ahead 1 -c:a aac -max_muxing_queue_size 4096 -f mpegts -
+2026-03-11 22:18:13,340 - 338711 - MainProcess - INFO - DEBUG_FFMPEG: Started PID 338724
+2026-03-11 22:18:13,634 - 338711 - MainProcess - INFO - FFMPEG_STDERR (PID 338724): [aac @ 0x5d5592e74ec0] Multiple frames in a packet.
+2026-03-11 22:18:13,635 - 338711 - MainProcess - INFO - FFMPEG_STDERR (PID 338724): [mpeg2video @ 0x5d5592e73c00] Invalid frame dimensions 0x0.
+2026-03-11 22:18:13,647 - 338711 - MainProcess - INFO - FFMPEG_STDERR (PID 338724): Last message repeated 13 times
+2026-03-11 22:18:13,647 - 338711 - MainProcess - INFO - FFMPEG_STDERR (PID 338724): [mpegts @ 0x5d5592e6ca80] start time for stream 3 is not set in estimate_timings_from_pts
+2026-03-11 22:18:13,647 - 338711 - MainProcess - INFO - FFMPEG_STDERR (PID 338724): [mpegts @ 0x5d5592e6ca80] PES packet size mismatch
+2026-03-11 22:18:13,647 - 338711 - MainProcess - INFO - FFMPEG_STDERR (PID 338724): [mpegts @ 0x5d5592e6ca80] Packet corrupt (stream = 1, dts = 5733413870), dropping it.
+2026-03-11 22:18:13,647 - 338711 - MainProcess - INFO - FFMPEG_STDERR (PID 338724): [mpegts @ 0x5d5592e6ca80] Could not find codec parameters for stream 4 (Unknown: none ([13][0][0][0] / 0x000D)): unknown codec
+2026-03-11 22:18:13,647 - 338711 - MainProcess - INFO - FFMPEG_STDERR (PID 338724): Consider increasing the value for the 'analyzeduration' (5000000) and 'probesize' (10000000) options
+2026-03-11 22:18:13,647 - 338711 - MainProcess - INFO - FFMPEG_STDERR (PID 338724): [mpegts @ 0x5d5592e6ca80] Could not find codec parameters for stream 5 (Unknown: none ([13][0][0][0] / 0x000D)): unknown codec
+2026-03-11 22:18:13,647 - 338711 - MainProcess - INFO - FFMPEG_STDERR (PID 338724): Consider increasing the value for the 'analyzeduration' (5000000) and 'probesize' (10000000) options
+2026-03-11 22:18:13,647 - 338711 - MainProcess - INFO - FFMPEG_STDERR (PID 338724): [mpegts @ 0x5d5592e6ca80] Could not find codec parameters for stream 6 (Unknown: none ([13][0][0][0] / 0x000D)): unknown codec
+2026-03-11 22:18:13,647 - 338711 - MainProcess - INFO - FFMPEG_STDERR (PID 338724): Consider increasing the value for the 'analyzeduration' (5000000) and 'probesize' (10000000) options
+2026-03-11 22:18:13,648 - 338711 - MainProcess - INFO - FFMPEG_STDERR (PID 338724): [mpegts @ 0x5d5592e6ca80] Could not find codec parameters for stream 7 (Unknown: none ([13][0][0][0] / 0x000D)): unknown codec
+2026-03-11 22:18:13,648 - 338711 - MainProcess - INFO - FFMPEG_STDERR (PID 338724): Consider increasing the value for the 'analyzeduration' (5000000) and 'probesize' (10000000) options
+2026-03-11 22:18:13,648 - 338711 - MainProcess - INFO - FFMPEG_STDERR (PID 338724): [mpegts @ 0x5d5592e6ca80] Could not find codec parameters for stream 8 (Unknown: none ([13][0][0][0] / 0x000D)): unknown codec
+2026-03-11 22:18:13,648 - 338711 - MainProcess - INFO - FFMPEG_STDERR (PID 338724): Consider increasing the value for the 'analyzeduration' (5000000) and 'probesize' (10000000) options
+2026-03-11 22:18:13,648 - 338711 - MainProcess - INFO - FFMPEG_STDERR (PID 338724): [mpegts @ 0x5d5592e6ca80] Could not find codec parameters for stream 9 (Unknown: none ([13][0][0][0] / 0x000D)): unknown codec
+2026-03-11 22:18:13,648 - 338711 - MainProcess - INFO - FFMPEG_STDERR (PID 338724): Consider increasing the value for the 'analyzeduration' (5000000) and 'probesize' (10000000) options
+2026-03-11 22:18:13,648 - 338711 - MainProcess - INFO - FFMPEG_STDERR (PID 338724): [mpegts @ 0x5d5592e6ca80] Could not find codec parameters for stream 10 (Unknown: none ([13][0][0][0] / 0x000D)): unknown codec
+2026-03-11 22:18:13,648 - 338711 - MainProcess - INFO - FFMPEG_STDERR (PID 338724): Consider increasing the value for the 'analyzeduration' (5000000) and 'probesize' (10000000) options
+2026-03-11 22:18:13,648 - 338711 - MainProcess - INFO - FFMPEG_STDERR (PID 338724): [mpegts @ 0x5d5592e6ca80] Could not find codec parameters for stream 11 (Unknown: none ([13][0][0][0] / 0x000D)): unknown codec
+2026-03-11 22:18:13,648 - 338711 - MainProcess - INFO - FFMPEG_STDERR (PID 338724): Consider increasing the value for the 'analyzeduration' (5000000) and 'probesize' (10000000) options
+2026-03-11 22:18:13,648 - 338711 - MainProcess - INFO - FFMPEG_STDERR (PID 338724): [mpegts @ 0x5d5592e6ca80] Could not find codec parameters for stream 12 (Unknown: none ([13][0][0][0] / 0x000D)): unknown codec
+2026-03-11 22:18:13,648 - 338711 - MainProcess - INFO - FFMPEG_STDERR (PID 338724): Consider increasing the value for the 'analyzeduration' (5000000) and 'probesize' (10000000) options
+2026-03-11 22:18:13,648 - 338711 - MainProcess - INFO - FFMPEG_STDERR (PID 338724): [mpegts @ 0x5d5592e6ca80] PES packet size mismatch
+2026-03-11 22:18:13,648 - 338711 - MainProcess - INFO - FFMPEG_STDERR (PID 338724): [mpegts @ 0x5d5592e6ca80] Packet corrupt (stream = 1, dts = 5733413870), dropping it.
+2026-03-11 22:18:13,686 - 338711 - MainProcess - INFO - FFMPEG_STDERR (PID 338724): Multiple -max_muxing_queue_size options specified for stream 0, only the last option '-max_muxing_queue_size 4096' will be used.
+2026-03-11 22:18:13,687 - 338711 - MainProcess - INFO - FFMPEG_STDERR (PID 338724): Multiple -max_muxing_queue_size options specified for stream 1, only the last option '-max_muxing_queue_size 4096' will be used.
+2026-03-11 22:18:13,708 - 338711 - MainProcess - INFO - FFMPEG_STDERR (PID 338724): [aac @ 0x5d5592ea5500] Sample rate index in program config element does not match the sample rate index configured by the container.
+2026-03-11 22:18:13,719 - 338711 - MainProcess - INFO - FFMPEG_STDERR (PID 338724): [aac @ 0x5d5592ea5500] Inconsistent channel configuration.
+2026-03-11 22:18:13,719 - 338711 - MainProcess - INFO - FFMPEG_STDERR (PID 338724): [aac @ 0x5d5592ea5500] get_buffer() failed
+2026-03-11 22:18:13,719 - 338711 - MainProcess - INFO - FFMPEG_STDERR (PID 338724): Error while decoding stream #0:1: Invalid argument
+2026-03-11 22:18:14,061 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=0.0MB, ahead=0.0s
+2026-03-11 22:18:14,070 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=0.1MB, ahead=0.0s
+2026-03-11 22:18:14,095 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=0.3MB, ahead=0.0s
+2026-03-11 22:18:14,117 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=0.4MB, ahead=0.0s
+2026-03-11 22:18:14,468 - 338711 - MainProcess - INFO - VIDEO_REQUEST: POST /api/video/status/h7yxl9gcu from 192.168.0.2
+2026-03-11 22:18:14,469 - 338711 - MainProcess - INFO - DEBUG_BUFFER: session=h7yxl9gcu, ahead=0.412667
+2026-03-11 22:18:14,764 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=5.0MB, ahead=0.4s
+2026-03-11 22:18:14,785 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=5.2MB, ahead=0.4s
+2026-03-11 22:18:14,803 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=5.3MB, ahead=0.4s
+2026-03-11 22:18:14,829 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=5.5MB, ahead=0.4s
+2026-03-11 22:18:15,079 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=0.4s
+2026-03-11 22:18:15,080 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=188376, took=0.000s
+2026-03-11 22:18:15,081 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:18:15,081 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=0.4s, len=188376, target=7864320, elapsed=0.002s, sleep_sec=0.022s
+2026-03-11 22:18:15,468 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=10.0MB, ahead=0.4s
+2026-03-11 22:18:15,469 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=10.0MB, ahead=0.4s
+2026-03-11 22:18:15,497 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=10.2MB, ahead=0.4s
+2026-03-11 22:18:15,519 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=10.3MB, ahead=0.4s
+2026-03-11 22:18:15,539 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=10.5MB, ahead=0.4s
+2026-03-11 22:18:16,191 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=15.1MB, ahead=0.4s
+2026-03-11 22:18:16,215 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=15.3MB, ahead=0.4s
+2026-03-11 22:18:16,217 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=0.4s
+2026-03-11 22:18:16,218 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=190408, took=0.001s
+2026-03-11 22:18:16,219 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:18:16,219 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=0.4s, len=190408, target=7864320, elapsed=0.004s, sleep_sec=0.020s
+2026-03-11 22:18:16,240 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=15.5MB, ahead=0.4s
+2026-03-11 22:18:16,468 - 338711 - MainProcess - INFO - VIDEO_REQUEST: POST /api/video/status/h7yxl9gcu from 192.168.0.2
+2026-03-11 22:18:16,469 - 338711 - MainProcess - INFO - DEBUG_BUFFER: session=h7yxl9gcu, ahead=1.162021
+2026-03-11 22:18:16,871 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=20.0MB, ahead=1.2s
+2026-03-11 22:18:16,871 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=20.0MB, ahead=1.2s
+2026-03-11 22:18:16,896 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=20.2MB, ahead=1.2s
+2026-03-11 22:18:16,919 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=20.4MB, ahead=1.2s
+2026-03-11 22:18:17,367 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=1.2s
+2026-03-11 22:18:17,368 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=191384, took=0.001s
+2026-03-11 22:18:17,369 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:18:17,369 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=1.2s, len=191384, target=7864320, elapsed=0.002s, sleep_sec=0.022s
+2026-03-11 22:18:17,565 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=25.0MB, ahead=1.2s
+2026-03-11 22:18:17,591 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=25.2MB, ahead=1.2s
+2026-03-11 22:18:17,616 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=25.4MB, ahead=1.2s
+2026-03-11 22:18:18,276 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=30.2MB, ahead=1.2s
+2026-03-11 22:18:18,276 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=30.2MB, ahead=1.2s
+2026-03-11 22:18:18,302 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=30.3MB, ahead=1.2s
+2026-03-11 22:18:18,322 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=30.5MB, ahead=1.2s
+2026-03-11 22:18:18,481 - 338711 - MainProcess - INFO - VIDEO_REQUEST: POST /api/video/status/h7yxl9gcu from 192.168.0.2
+2026-03-11 22:18:18,483 - 338711 - MainProcess - INFO - DEBUG_BUFFER: session=h7yxl9gcu, ahead=2.1833539999999996
+2026-03-11 22:18:18,537 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=2.2s
+2026-03-11 22:18:18,540 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=193224, took=0.001s
+2026-03-11 22:18:18,541 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:18:18,541 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=2.2s, len=193224, target=7864320, elapsed=0.005s, sleep_sec=0.019s
+2026-03-11 22:18:18,967 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=35.1MB, ahead=2.2s
+2026-03-11 22:18:18,991 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=35.3MB, ahead=2.2s
+2026-03-11 22:18:19,011 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=35.4MB, ahead=2.2s
+2026-03-11 22:18:19,674 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=40.1MB, ahead=2.2s
+2026-03-11 22:18:19,700 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=40.3MB, ahead=2.2s
+2026-03-11 22:18:19,700 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=40.3MB, ahead=2.2s
+2026-03-11 22:18:19,701 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=2.2s
+2026-03-11 22:18:19,702 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=196184, took=0.001s
+2026-03-11 22:18:19,703 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:18:19,703 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=2.2s, len=196184, target=7864320, elapsed=0.003s, sleep_sec=0.022s
+2026-03-11 22:18:20,365 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=45.1MB, ahead=2.2s
+2026-03-11 22:18:20,384 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=45.2MB, ahead=2.2s
+2026-03-11 22:18:20,411 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=45.4MB, ahead=2.2s
+2026-03-11 22:18:20,472 - 338711 - MainProcess - INFO - VIDEO_REQUEST: POST /api/video/status/h7yxl9gcu from 192.168.0.2
+2026-03-11 22:18:20,475 - 338711 - MainProcess - INFO - DEBUG_BUFFER: session=h7yxl9gcu, ahead=2.441687
+2026-03-11 22:18:20,922 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=2.4s
+2026-03-11 22:18:20,923 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=146472, took=0.001s
+2026-03-11 22:18:20,924 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:18:20,924 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=2.4s, len=146472, target=7864320, elapsed=0.003s, sleep_sec=0.015s
+2026-03-11 22:18:21,067 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=50.2MB, ahead=2.4s
+2026-03-11 22:18:21,088 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=50.3MB, ahead=2.4s
+2026-03-11 22:18:21,113 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=50.5MB, ahead=2.4s
+2026-03-11 22:18:21,114 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=50.5MB, ahead=2.4s
+2026-03-11 22:18:21,759 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=55.1MB, ahead=2.4s
+2026-03-11 22:18:21,781 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=55.3MB, ahead=2.4s
+2026-03-11 22:18:21,807 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=55.5MB, ahead=2.4s
+2026-03-11 22:18:22,122 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=2.4s
+2026-03-11 22:18:22,123 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=196088, took=0.001s
+2026-03-11 22:18:22,124 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:18:22,124 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=2.4s, len=196088, target=7864320, elapsed=0.002s, sleep_sec=0.023s
+2026-03-11 22:18:22,449 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=60.1MB, ahead=2.4s
+2026-03-11 22:18:22,474 - 338711 - MainProcess - INFO - VIDEO_REQUEST: POST /api/video/status/h7yxl9gcu from 192.168.0.2
+2026-03-11 22:18:22,476 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=60.3MB, ahead=2.4s
+2026-03-11 22:18:22,478 - 338711 - MainProcess - INFO - DEBUG_BUFFER: session=h7yxl9gcu, ahead=2.207687
+2026-03-11 22:18:22,501 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=60.4MB, ahead=2.4s
+2026-03-11 22:18:22,526 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=60.6MB, ahead=2.2s
+2026-03-11 22:18:23,141 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=65.0MB, ahead=2.2s
+2026-03-11 22:18:23,167 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=65.2MB, ahead=2.2s
+2026-03-11 22:18:23,192 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=65.4MB, ahead=2.2s
+2026-03-11 22:18:23,335 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=2.2s
+2026-03-11 22:18:23,336 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=193076, took=0.001s
+2026-03-11 22:18:23,337 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:18:23,337 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=2.2s, len=193076, target=7864320, elapsed=0.004s, sleep_sec=0.021s
+2026-03-11 22:18:23,851 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=70.1MB, ahead=2.2s
+2026-03-11 22:18:23,877 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=70.3MB, ahead=2.2s
+2026-03-11 22:18:23,903 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=70.5MB, ahead=2.2s
+2026-03-11 22:18:23,946 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=70.8MB, ahead=2.2s
+2026-03-11 22:18:24,472 - 338711 - MainProcess - INFO - VIDEO_REQUEST: POST /api/video/status/h7yxl9gcu from 192.168.0.2
+2026-03-11 22:18:24,475 - 338711 - MainProcess - INFO - DEBUG_BUFFER: session=h7yxl9gcu, ahead=0.9490210000000001
+2026-03-11 22:18:24,552 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=75.1MB, ahead=0.9s
+2026-03-11 22:18:24,553 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=0.9s
+2026-03-11 22:18:24,554 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=174616, took=0.001s
+2026-03-11 22:18:24,554 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:18:24,555 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=0.9s, len=174616, target=7864320, elapsed=0.003s, sleep_sec=0.019s
+2026-03-11 22:18:24,576 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=75.3MB, ahead=0.9s
+2026-03-11 22:18:24,603 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=75.5MB, ahead=0.9s
+2026-03-11 22:18:25,247 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=80.1MB, ahead=0.9s
+2026-03-11 22:18:25,272 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=80.3MB, ahead=0.9s
+2026-03-11 22:18:25,296 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=80.5MB, ahead=0.9s
+2026-03-11 22:18:25,347 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=80.8MB, ahead=0.9s
+2026-03-11 22:18:25,795 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=0.9s
+2026-03-11 22:18:25,796 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=146076, took=0.001s
+2026-03-11 22:18:25,797 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:18:25,797 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=0.9s, len=146076, target=7864320, elapsed=0.003s, sleep_sec=0.015s
+2026-03-11 22:18:25,947 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=85.1MB, ahead=0.9s
+2026-03-11 22:18:25,973 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=85.3MB, ahead=0.9s
+2026-03-11 22:18:26,475 - 338711 - MainProcess - INFO - VIDEO_REQUEST: POST /api/video/status/h7yxl9gcu from 192.168.0.2
+2026-03-11 22:18:26,480 - 338711 - MainProcess - INFO - DEBUG_BUFFER: session=h7yxl9gcu, ahead=0.8183540000000011
+2026-03-11 22:18:26,647 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=90.2MB, ahead=0.8s
+2026-03-11 22:18:26,673 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=90.3MB, ahead=0.8s
+2026-03-11 22:18:26,694 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=90.5MB, ahead=0.8s
+2026-03-11 22:18:26,767 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=91.0MB, ahead=0.8s
+2026-03-11 22:18:26,911 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=0.8s
+2026-03-11 22:18:26,912 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=187964, took=0.001s
+2026-03-11 22:18:26,913 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:18:26,913 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=0.8s, len=187964, target=7864320, elapsed=0.003s, sleep_sec=0.021s
+2026-03-11 22:18:27,338 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=95.1MB, ahead=0.8s
+2026-03-11 22:18:27,364 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=95.3MB, ahead=0.8s
+2026-03-11 22:18:27,389 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=95.4MB, ahead=0.8s
+2026-03-11 22:18:28,055 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=100.2MB, ahead=0.8s
+2026-03-11 22:18:28,080 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=100.4MB, ahead=0.8s
+2026-03-11 22:18:28,104 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=0.8s
+2026-03-11 22:18:28,105 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=145888, took=0.000s
+2026-03-11 22:18:28,106 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:18:28,106 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=0.8s, len=145888, target=7864320, elapsed=0.003s, sleep_sec=0.016s
+2026-03-11 22:18:28,171 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=101.0MB, ahead=0.8s
+2026-03-11 22:18:28,471 - 338711 - MainProcess - INFO - VIDEO_REQUEST: POST /api/video/status/h7yxl9gcu from 192.168.0.2
+2026-03-11 22:18:28,475 - 338711 - MainProcess - INFO - DEBUG_BUFFER: session=h7yxl9gcu, ahead=1.120928000000001
+2026-03-11 22:18:28,738 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=105.0MB, ahead=1.1s
+2026-03-11 22:18:28,760 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=105.2MB, ahead=1.1s
+2026-03-11 22:18:28,784 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=105.4MB, ahead=1.1s
+2026-03-11 22:18:29,231 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=1.1s
+2026-03-11 22:18:29,232 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=193264, took=0.001s
+2026-03-11 22:18:29,233 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:18:29,234 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=1.1s, len=193264, target=7864320, elapsed=0.003s, sleep_sec=0.022s
+2026-03-11 22:18:29,446 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=110.1MB, ahead=1.1s
+2026-03-11 22:18:29,466 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=110.2MB, ahead=1.1s
+2026-03-11 22:18:29,484 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=110.3MB, ahead=1.1s
+2026-03-11 22:18:29,491 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=110.4MB, ahead=1.1s
+2026-03-11 22:18:29,503 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=110.5MB, ahead=1.1s
+2026-03-11 22:18:29,589 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=111.1MB, ahead=1.1s
+2026-03-11 22:18:30,149 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=115.1MB, ahead=1.1s
+2026-03-11 22:18:30,174 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=115.3MB, ahead=1.1s
+2026-03-11 22:18:30,193 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=115.4MB, ahead=1.1s
+2026-03-11 22:18:30,330 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=1.1s
+2026-03-11 22:18:30,331 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=196608, took=0.001s
+2026-03-11 22:18:30,332 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:18:30,332 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=1.1s, len=196608, target=7864320, elapsed=0.004s, sleep_sec=0.021s
+2026-03-11 22:18:30,478 - 338711 - MainProcess - INFO - VIDEO_REQUEST: POST /api/video/status/h7yxl9gcu from 192.168.0.2
+2026-03-11 22:18:30,482 - 338711 - MainProcess - INFO - DEBUG_BUFFER: session=h7yxl9gcu, ahead=2.341020999999998
+2026-03-11 22:18:30,851 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=120.1MB, ahead=2.3s
+2026-03-11 22:18:30,876 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=120.3MB, ahead=2.3s
+2026-03-11 22:18:30,894 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=120.4MB, ahead=2.3s
+2026-03-11 22:18:30,993 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=121.1MB, ahead=2.3s
+2026-03-11 22:18:31,513 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=2.3s
+2026-03-11 22:18:31,514 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=144280, took=0.001s
+2026-03-11 22:18:31,515 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:18:31,515 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=2.3s, len=144280, target=7864320, elapsed=0.002s, sleep_sec=0.016s
+2026-03-11 22:18:31,556 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=125.1MB, ahead=2.3s
+2026-03-11 22:18:31,580 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=125.3MB, ahead=2.3s
+2026-03-11 22:18:32,245 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=130.1MB, ahead=2.3s
+2026-03-11 22:18:32,271 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=130.3MB, ahead=2.3s
+2026-03-11 22:18:32,296 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=130.5MB, ahead=2.3s
+2026-03-11 22:18:32,393 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=131.2MB, ahead=2.3s
+2026-03-11 22:18:32,475 - 338711 - MainProcess - INFO - VIDEO_REQUEST: POST /api/video/status/h7yxl9gcu from 192.168.0.2
+2026-03-11 22:18:32,480 - 338711 - MainProcess - INFO - DEBUG_BUFFER: session=h7yxl9gcu, ahead=2.783020999999998
+2026-03-11 22:18:32,738 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=2.8s
+2026-03-11 22:18:32,738 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=159988, took=0.000s
+2026-03-11 22:18:32,739 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:18:32,739 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=2.8s, len=159988, target=7864320, elapsed=0.002s, sleep_sec=0.018s
+2026-03-11 22:18:32,933 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=135.0MB, ahead=2.8s
+2026-03-11 22:18:32,959 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=135.2MB, ahead=2.8s
+2026-03-11 22:18:32,984 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=135.4MB, ahead=2.8s
+2026-03-11 22:18:33,644 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=140.2MB, ahead=2.8s
+2026-03-11 22:18:33,669 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=140.4MB, ahead=2.8s
+2026-03-11 22:18:33,788 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=141.2MB, ahead=2.8s
+2026-03-11 22:18:33,959 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=2.8s
+2026-03-11 22:18:33,961 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=195516, took=0.001s
+2026-03-11 22:18:33,962 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:18:33,962 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=2.8s, len=195516, target=7864320, elapsed=0.003s, sleep_sec=0.022s
+2026-03-11 22:18:34,325 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=145.1MB, ahead=2.8s
+2026-03-11 22:18:34,351 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=145.3MB, ahead=2.8s
+2026-03-11 22:18:34,371 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=145.4MB, ahead=2.8s
+2026-03-11 22:18:34,474 - 338711 - MainProcess - INFO - VIDEO_REQUEST: POST /api/video/status/h7yxl9gcu from 192.168.0.2
+2026-03-11 22:18:34,478 - 338711 - MainProcess - INFO - DEBUG_BUFFER: session=h7yxl9gcu, ahead=2.084688
+2026-03-11 22:18:35,013 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=150.0MB, ahead=2.1s
+2026-03-11 22:18:35,030 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=150.1MB, ahead=2.1s
+2026-03-11 22:18:35,055 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=150.3MB, ahead=2.1s
+2026-03-11 22:18:35,076 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=150.5MB, ahead=2.1s
+2026-03-11 22:18:35,168 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=2.1s
+2026-03-11 22:18:35,169 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=156792, took=0.001s
+2026-03-11 22:18:35,170 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:18:35,170 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=2.1s, len=156792, target=7864320, elapsed=0.004s, sleep_sec=0.016s
+2026-03-11 22:18:35,188 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=151.3MB, ahead=2.1s
+2026-03-11 22:18:35,716 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=155.0MB, ahead=2.1s
+2026-03-11 22:18:35,735 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=155.2MB, ahead=2.1s
+2026-03-11 22:18:35,754 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=155.3MB, ahead=2.1s
+2026-03-11 22:18:35,779 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=155.5MB, ahead=2.1s
+2026-03-11 22:18:36,300 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=2.1s
+2026-03-11 22:18:36,301 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=191456, took=0.001s
+2026-03-11 22:18:36,302 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:18:36,303 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=2.1s, len=191456, target=7864320, elapsed=0.003s, sleep_sec=0.022s
+2026-03-11 22:18:36,431 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=160.1MB, ahead=2.1s
+2026-03-11 22:18:36,454 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=160.3MB, ahead=2.1s
+2026-03-11 22:18:36,473 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=160.4MB, ahead=2.1s
+2026-03-11 22:18:36,477 - 338711 - MainProcess - INFO - VIDEO_REQUEST: POST /api/video/status/h7yxl9gcu from 192.168.0.2
+2026-03-11 22:18:36,481 - 338711 - MainProcess - INFO - DEBUG_BUFFER: session=h7yxl9gcu, ahead=2.247686999999999
+2026-03-11 22:18:36,610 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=161.4MB, ahead=2.2s
+2026-03-11 22:18:37,123 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=165.1MB, ahead=2.2s
+2026-03-11 22:18:37,146 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=165.3MB, ahead=2.2s
+2026-03-11 22:18:37,168 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=165.4MB, ahead=2.2s
+2026-03-11 22:18:37,409 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=2.2s
+2026-03-11 22:18:37,410 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=193076, took=0.001s
+2026-03-11 22:18:37,411 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:18:37,411 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=2.2s, len=193076, target=7864320, elapsed=0.004s, sleep_sec=0.021s
+2026-03-11 22:18:37,823 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=170.1MB, ahead=2.2s
+2026-03-11 22:18:37,848 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=170.3MB, ahead=2.2s
+2026-03-11 22:18:37,870 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=170.4MB, ahead=2.2s
+2026-03-11 22:18:38,022 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=171.5MB, ahead=2.2s
+2026-03-11 22:18:38,472 - 338711 - MainProcess - INFO - VIDEO_REQUEST: POST /api/video/status/h7yxl9gcu from 192.168.0.2
+2026-03-11 22:18:38,476 - 338711 - MainProcess - INFO - DEBUG_BUFFER: session=h7yxl9gcu, ahead=3.3380210000000012
+2026-03-11 22:18:38,510 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=3.3s
+2026-03-11 22:18:38,512 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=189844, took=0.001s
+2026-03-11 22:18:38,512 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:18:38,513 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=3.3s, len=189844, target=7864320, elapsed=0.003s, sleep_sec=0.022s
+2026-03-11 22:18:38,536 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=175.2MB, ahead=3.3s
+2026-03-11 22:18:38,560 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=175.3MB, ahead=3.3s
+2026-03-11 22:18:39,217 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=180.0MB, ahead=3.3s
+2026-03-11 22:18:39,232 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=180.1MB, ahead=3.3s
+2026-03-11 22:18:39,244 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=180.2MB, ahead=3.3s
+2026-03-11 22:18:39,262 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=180.3MB, ahead=3.3s
+2026-03-11 22:18:39,281 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=180.5MB, ahead=3.3s
+2026-03-11 22:18:39,433 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=181.6MB, ahead=3.3s
+2026-03-11 22:18:39,609 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=3.3s
+2026-03-11 22:18:39,611 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=142164, took=0.001s
+2026-03-11 22:18:39,611 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:18:39,612 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=3.3s, len=142164, target=7864320, elapsed=0.004s, sleep_sec=0.014s
+2026-03-11 22:18:39,933 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=185.1MB, ahead=3.3s
+2026-03-11 22:18:39,958 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=185.3MB, ahead=3.3s
+2026-03-11 22:18:39,978 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=185.4MB, ahead=3.3s
+2026-03-11 22:18:40,469 - 338711 - MainProcess - INFO - VIDEO_REQUEST: POST /api/video/status/h7yxl9gcu from 192.168.0.2
+2026-03-11 22:18:40,471 - 338711 - MainProcess - INFO - DEBUG_BUFFER: session=h7yxl9gcu, ahead=5.769031999999999
+2026-03-11 22:18:40,637 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=190.1MB, ahead=5.8s
+2026-03-11 22:18:40,658 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=190.3MB, ahead=5.8s
+2026-03-11 22:18:40,681 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=190.4MB, ahead=5.8s
+2026-03-11 22:18:40,682 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=5.8s
+2026-03-11 22:18:40,682 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=137052, took=0.000s
+2026-03-11 22:18:40,683 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:18:40,683 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=5.8s, len=137052, target=7864320, elapsed=0.002s, sleep_sec=0.016s
+2026-03-11 22:18:40,852 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=191.6MB, ahead=5.8s
+2026-03-11 22:18:41,336 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=195.1MB, ahead=5.8s
+2026-03-11 22:18:41,356 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=195.2MB, ahead=5.8s
+2026-03-11 22:18:41,381 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=195.4MB, ahead=5.8s
+2026-03-11 22:18:41,711 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=5.8s
+2026-03-11 22:18:41,712 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=142692, took=0.000s
+2026-03-11 22:18:41,713 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:18:41,713 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=5.8s, len=142692, target=7864320, elapsed=0.002s, sleep_sec=0.016s
+2026-03-11 22:18:42,036 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=200.0MB, ahead=5.8s
+2026-03-11 22:18:42,062 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=200.2MB, ahead=5.8s
+2026-03-11 22:18:42,081 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=200.3MB, ahead=5.8s
+2026-03-11 22:18:42,259 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=201.6MB, ahead=5.8s
+2026-03-11 22:18:42,471 - 338711 - MainProcess - INFO - VIDEO_REQUEST: POST /api/video/status/h7yxl9gcu from 192.168.0.2
+2026-03-11 22:18:42,473 - 338711 - MainProcess - INFO - DEBUG_BUFFER: session=h7yxl9gcu, ahead=9.161687000000004
+2026-03-11 22:18:42,749 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=205.2MB, ahead=9.2s
+2026-03-11 22:18:42,768 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=205.3MB, ahead=9.2s
+2026-03-11 22:18:42,790 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=205.4MB, ahead=9.2s
+2026-03-11 22:18:42,868 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=9.2s
+2026-03-11 22:18:42,869 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=192856, took=0.001s
+2026-03-11 22:18:42,870 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:18:42,870 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=9.2s, len=192856, target=7864320, elapsed=0.002s, sleep_sec=0.022s
+2026-03-11 22:18:43,439 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=210.1MB, ahead=9.2s
+2026-03-11 22:18:43,460 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=210.3MB, ahead=9.2s
+2026-03-11 22:18:43,486 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=210.4MB, ahead=9.2s
+2026-03-11 22:18:43,659 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=211.7MB, ahead=9.2s
+2026-03-11 22:18:44,080 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=9.2s
+2026-03-11 22:18:44,082 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=196608, took=0.001s
+2026-03-11 22:18:44,082 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:18:44,083 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=9.2s, len=196608, target=7864320, elapsed=0.004s, sleep_sec=0.021s
+2026-03-11 22:18:44,124 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=215.0MB, ahead=9.2s
+2026-03-11 22:18:44,149 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=215.2MB, ahead=9.2s
+2026-03-11 22:18:44,174 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=215.4MB, ahead=9.2s
+2026-03-11 22:18:44,475 - 338711 - MainProcess - INFO - VIDEO_REQUEST: POST /api/video/status/h7yxl9gcu from 192.168.0.2
+2026-03-11 22:18:44,480 - 338711 - MainProcess - INFO - DEBUG_BUFFER: session=h7yxl9gcu, ahead=8.442021000000004
+2026-03-11 22:18:44,837 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=220.1MB, ahead=8.4s
+2026-03-11 22:18:44,862 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=220.3MB, ahead=8.4s
+2026-03-11 22:18:45,054 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=221.7MB, ahead=8.4s
+2026-03-11 22:18:45,291 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=8.4s
+2026-03-11 22:18:45,292 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=195988, took=0.001s
+2026-03-11 22:18:45,293 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:18:45,295 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=8.4s, len=195988, target=7864320, elapsed=0.005s, sleep_sec=0.020s
+2026-03-11 22:18:45,537 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=225.1MB, ahead=8.4s
+2026-03-11 22:18:45,564 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=225.3MB, ahead=8.4s
+2026-03-11 22:18:45,588 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=225.5MB, ahead=8.4s
+2026-03-11 22:18:46,218 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=230.0MB, ahead=8.4s
+2026-03-11 22:18:46,243 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=230.2MB, ahead=8.4s
+2026-03-11 22:18:46,270 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=230.4MB, ahead=8.4s
+2026-03-11 22:18:46,460 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=231.8MB, ahead=8.4s
+2026-03-11 22:18:46,481 - 338711 - MainProcess - INFO - VIDEO_REQUEST: POST /api/video/status/h7yxl9gcu from 192.168.0.2
+2026-03-11 22:18:46,484 - 338711 - MainProcess - INFO - DEBUG_BUFFER: session=h7yxl9gcu, ahead=8.127506000000004
+2026-03-11 22:18:46,514 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=8.1s
+2026-03-11 22:18:46,515 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=196280, took=0.001s
+2026-03-11 22:18:46,516 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:18:46,516 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=8.1s, len=196280, target=7864320, elapsed=0.004s, sleep_sec=0.021s
+2026-03-11 22:18:46,923 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=235.1MB, ahead=8.1s
+2026-03-11 22:18:46,942 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=235.2MB, ahead=8.1s
+2026-03-11 22:18:46,967 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=235.4MB, ahead=8.1s
+2026-03-11 22:18:47,607 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=240.0MB, ahead=8.1s
+2026-03-11 22:18:47,633 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=240.2MB, ahead=8.1s
+2026-03-11 22:18:47,652 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=240.3MB, ahead=8.1s
+2026-03-11 22:18:47,730 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=8.1s
+2026-03-11 22:18:47,731 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=196608, took=0.001s
+2026-03-11 22:18:47,732 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:18:47,733 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=8.1s, len=196608, target=7864320, elapsed=0.003s, sleep_sec=0.022s
+2026-03-11 22:18:47,850 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=241.8MB, ahead=8.1s
+2026-03-11 22:18:48,304 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=245.0MB, ahead=8.1s
+2026-03-11 22:18:48,330 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=245.2MB, ahead=8.1s
+2026-03-11 22:18:48,356 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=245.4MB, ahead=8.1s
+2026-03-11 22:18:48,475 - 338711 - MainProcess - INFO - VIDEO_REQUEST: POST /api/video/status/h7yxl9gcu from 192.168.0.2
+2026-03-11 22:18:48,479 - 338711 - MainProcess - INFO - DEBUG_BUFFER: session=h7yxl9gcu, ahead=7.995996999999996
+2026-03-11 22:18:48,937 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=8.0s
+2026-03-11 22:18:48,939 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=180668, took=0.001s
+2026-03-11 22:18:48,939 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:18:48,940 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=8.0s, len=180668, target=7864320, elapsed=0.004s, sleep_sec=0.019s
+2026-03-11 22:18:49,012 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=250.1MB, ahead=8.0s
+2026-03-11 22:18:49,037 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=250.3MB, ahead=8.0s
+2026-03-11 22:18:49,063 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=250.5MB, ahead=8.0s
+2026-03-11 22:18:49,246 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=251.8MB, ahead=8.0s
+2026-03-11 22:18:49,714 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=255.2MB, ahead=8.0s
+2026-03-11 22:18:49,739 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=255.4MB, ahead=8.0s
+2026-03-11 22:18:50,158 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=8.0s
+2026-03-11 22:18:50,160 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=173336, took=0.001s
+2026-03-11 22:18:50,160 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:18:50,161 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=8.0s, len=173336, target=7864320, elapsed=0.002s, sleep_sec=0.020s
+2026-03-11 22:18:50,405 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=260.2MB, ahead=8.0s
+2026-03-11 22:18:50,424 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=260.3MB, ahead=8.0s
+2026-03-11 22:18:50,449 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=260.5MB, ahead=8.0s
+2026-03-11 22:18:50,472 - 338711 - MainProcess - INFO - VIDEO_REQUEST: POST /api/video/status/h7yxl9gcu from 192.168.0.2
+2026-03-11 22:18:50,477 - 338711 - MainProcess - INFO - DEBUG_BUFFER: session=h7yxl9gcu, ahead=8.192512999999998
+2026-03-11 22:18:50,648 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=261.9MB, ahead=8.2s
+2026-03-11 22:18:51,084 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=265.0MB, ahead=8.2s
+2026-03-11 22:18:51,109 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=265.2MB, ahead=8.2s
+2026-03-11 22:18:51,136 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=265.4MB, ahead=8.2s
+2026-03-11 22:18:51,371 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=8.2s
+2026-03-11 22:18:51,371 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=175236, took=0.000s
+2026-03-11 22:18:51,372 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:18:51,373 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=8.2s, len=175236, target=7864320, elapsed=0.003s, sleep_sec=0.020s
+2026-03-11 22:18:51,794 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=270.1MB, ahead=8.2s
+2026-03-11 22:18:51,812 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=270.3MB, ahead=8.2s
+2026-03-11 22:18:51,861 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=270.5MB, ahead=8.2s
+2026-03-11 22:18:52,066 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=271.9MB, ahead=8.2s
+2026-03-11 22:18:52,475 - 338711 - MainProcess - INFO - VIDEO_REQUEST: POST /api/video/status/h7yxl9gcu from 192.168.0.2
+2026-03-11 22:18:52,480 - 338711 - MainProcess - INFO - DEBUG_BUFFER: session=h7yxl9gcu, ahead=7.473973000000001
+2026-03-11 22:18:52,511 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=275.1MB, ahead=7.5s
+2026-03-11 22:18:52,536 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=275.3MB, ahead=7.5s
+2026-03-11 22:18:52,563 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=7.5s
+2026-03-11 22:18:52,564 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=182556, took=0.001s
+2026-03-11 22:18:52,565 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:18:52,565 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=7.5s, len=182556, target=7864320, elapsed=0.002s, sleep_sec=0.021s
+2026-03-11 22:18:53,207 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=280.1MB, ahead=7.5s
+2026-03-11 22:18:53,229 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=280.3MB, ahead=7.5s
+2026-03-11 22:18:53,256 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=280.5MB, ahead=7.5s
+2026-03-11 22:18:53,463 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=282.0MB, ahead=7.5s
+2026-03-11 22:18:53,766 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=7.5s
+2026-03-11 22:18:53,767 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=193452, took=0.000s
+2026-03-11 22:18:53,768 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:18:53,768 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=7.5s, len=193452, target=7864320, elapsed=0.002s, sleep_sec=0.022s
+2026-03-11 22:18:53,894 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=285.1MB, ahead=7.5s
+2026-03-11 22:18:53,913 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=285.2MB, ahead=7.5s
+2026-03-11 22:18:53,938 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=285.4MB, ahead=7.5s
+2026-03-11 22:18:54,479 - 338711 - MainProcess - INFO - VIDEO_REQUEST: POST /api/video/status/h7yxl9gcu from 192.168.0.2
+2026-03-11 22:18:54,482 - 338711 - MainProcess - INFO - DEBUG_BUFFER: session=h7yxl9gcu, ahead=6.951687
+2026-03-11 22:18:54,595 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=290.1MB, ahead=7.0s
+2026-03-11 22:18:54,614 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=290.3MB, ahead=7.0s
+2026-03-11 22:18:54,639 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=290.4MB, ahead=7.0s
+2026-03-11 22:18:54,859 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=292.0MB, ahead=7.0s
+2026-03-11 22:18:54,976 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=7.0s
+2026-03-11 22:18:54,977 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=196608, took=0.001s
+2026-03-11 22:18:54,978 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:18:54,978 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=7.0s, len=196608, target=7864320, elapsed=0.003s, sleep_sec=0.022s
+2026-03-11 22:18:55,283 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=295.1MB, ahead=7.0s
+2026-03-11 22:18:55,309 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=295.3MB, ahead=7.0s
+2026-03-11 22:18:55,335 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=295.4MB, ahead=7.0s
+2026-03-11 22:18:55,983 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=300.1MB, ahead=7.0s
+2026-03-11 22:18:56,008 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=300.3MB, ahead=7.0s
+2026-03-11 22:18:56,026 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=300.4MB, ahead=7.0s
+2026-03-11 22:18:56,185 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=7.0s
+2026-03-11 22:18:56,189 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=146416, took=0.003s
+2026-03-11 22:18:56,190 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:18:56,190 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=7.0s, len=146416, target=7864320, elapsed=0.007s, sleep_sec=0.012s
+2026-03-11 22:18:56,250 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=302.0MB, ahead=7.0s
+2026-03-11 22:18:56,474 - 338711 - MainProcess - INFO - VIDEO_REQUEST: POST /api/video/status/h7yxl9gcu from 192.168.0.2
+2026-03-11 22:18:56,476 - 338711 - MainProcess - INFO - DEBUG_BUFFER: session=h7yxl9gcu, ahead=7.173353999999996
+2026-03-11 22:18:56,685 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=305.1MB, ahead=7.2s
+2026-03-11 22:18:56,710 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=305.3MB, ahead=7.2s
+2026-03-11 22:18:56,736 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=305.5MB, ahead=7.2s
+2026-03-11 22:18:57,294 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=7.2s
+2026-03-11 22:18:57,296 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=174880, took=0.001s
+2026-03-11 22:18:57,297 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:18:57,298 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=7.2s, len=174880, target=7864320, elapsed=0.003s, sleep_sec=0.019s
+2026-03-11 22:18:57,386 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=310.1MB, ahead=7.2s
+2026-03-11 22:18:57,399 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=310.2MB, ahead=7.2s
+2026-03-11 22:18:57,425 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=310.4MB, ahead=7.2s
+2026-03-11 22:18:57,657 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=312.0MB, ahead=7.2s
+2026-03-11 22:18:58,089 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=315.1MB, ahead=7.2s
+2026-03-11 22:18:58,110 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=315.3MB, ahead=7.2s
+2026-03-11 22:18:58,129 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=315.4MB, ahead=7.2s
+2026-03-11 22:18:58,344 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=7.2s
+2026-03-11 22:18:58,345 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=148108, took=0.000s
+2026-03-11 22:18:58,345 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:18:58,346 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=7.2s, len=148108, target=7864320, elapsed=0.003s, sleep_sec=0.016s
+2026-03-11 22:18:58,486 - 338711 - MainProcess - INFO - VIDEO_REQUEST: POST /api/video/status/h7yxl9gcu from 192.168.0.2
+2026-03-11 22:18:58,491 - 338711 - MainProcess - INFO - DEBUG_BUFFER: session=h7yxl9gcu, ahead=8.871354000000004
+2026-03-11 22:18:58,794 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=320.0MB, ahead=8.9s
+2026-03-11 22:18:58,817 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=320.2MB, ahead=8.9s
+2026-03-11 22:18:58,839 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=320.3MB, ahead=8.9s
+2026-03-11 22:18:58,857 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=320.5MB, ahead=8.9s
+2026-03-11 22:18:59,096 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=322.2MB, ahead=8.9s
+2026-03-11 22:18:59,363 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=8.9s
+2026-03-11 22:18:59,367 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=135888, took=0.001s
+2026-03-11 22:18:59,368 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.001s
+2026-03-11 22:18:59,369 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=8.9s, len=135888, target=7864320, elapsed=0.006s, sleep_sec=0.012s
+2026-03-11 22:18:59,506 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=325.1MB, ahead=8.9s
+2026-03-11 22:18:59,526 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=325.2MB, ahead=8.9s
+2026-03-11 22:18:59,551 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=325.4MB, ahead=8.9s
+2026-03-11 22:19:00,209 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=330.1MB, ahead=8.9s
+2026-03-11 22:19:00,229 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=330.2MB, ahead=8.9s
+2026-03-11 22:19:00,250 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=330.4MB, ahead=8.9s
+2026-03-11 22:19:00,267 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=330.5MB, ahead=8.9s
+2026-03-11 22:19:00,372 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=8.9s
+2026-03-11 22:19:00,373 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=174296, took=0.001s
+2026-03-11 22:19:00,374 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:19:00,374 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=8.9s, len=174296, target=7864320, elapsed=0.003s, sleep_sec=0.019s
+2026-03-11 22:19:00,474 - 338711 - MainProcess - INFO - VIDEO_REQUEST: POST /api/video/status/h7yxl9gcu from 192.168.0.2
+2026-03-11 22:19:00,480 - 338711 - MainProcess - INFO - DEBUG_BUFFER: session=h7yxl9gcu, ahead=12.354687999999996
+2026-03-11 22:19:00,505 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=332.2MB, ahead=12.4s
+2026-03-11 22:19:00,922 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=335.1MB, ahead=12.4s
+2026-03-11 22:19:00,947 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=335.3MB, ahead=12.4s
+2026-03-11 22:19:00,973 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=335.5MB, ahead=12.4s
+2026-03-11 22:19:01,535 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=12.4s
+2026-03-11 22:19:01,536 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=188940, took=0.001s
+2026-03-11 22:19:01,537 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:19:01,538 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=12.4s, len=188940, target=7864320, elapsed=0.003s, sleep_sec=0.021s
+2026-03-11 22:19:01,607 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=340.0MB, ahead=12.4s
+2026-03-11 22:19:01,627 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=340.2MB, ahead=12.4s
+2026-03-11 22:19:01,653 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=340.4MB, ahead=12.4s
+2026-03-11 22:19:01,917 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=342.3MB, ahead=12.4s
+2026-03-11 22:19:02,302 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=345.0MB, ahead=12.4s
+2026-03-11 22:19:02,327 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=345.2MB, ahead=12.4s
+2026-03-11 22:19:02,353 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=345.4MB, ahead=12.4s
+2026-03-11 22:19:02,475 - 338711 - MainProcess - INFO - VIDEO_REQUEST: POST /api/video/status/h7yxl9gcu from 192.168.0.2
+2026-03-11 22:19:02,479 - 338711 - MainProcess - INFO - DEBUG_BUFFER: session=h7yxl9gcu, ahead=12.220672
+2026-03-11 22:19:02,725 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=12.2s
+2026-03-11 22:19:02,726 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=174580, took=0.001s
+2026-03-11 22:19:02,727 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:19:02,727 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=12.2s, len=174580, target=7864320, elapsed=0.003s, sleep_sec=0.019s
+2026-03-11 22:19:03,007 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=350.1MB, ahead=12.2s
+2026-03-11 22:19:03,031 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=350.3MB, ahead=12.2s
+2026-03-11 22:19:03,051 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=350.4MB, ahead=12.2s
+2026-03-11 22:19:03,328 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=352.4MB, ahead=12.2s
+2026-03-11 22:19:03,711 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=355.2MB, ahead=12.2s
+2026-03-11 22:19:03,736 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=355.3MB, ahead=12.2s
+2026-03-11 22:19:03,894 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=12.2s
+2026-03-11 22:19:03,896 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=193504, took=0.001s
+2026-03-11 22:19:03,896 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:19:03,897 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=12.2s, len=193504, target=7864320, elapsed=0.002s, sleep_sec=0.022s
+2026-03-11 22:19:04,397 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=360.1MB, ahead=12.2s
+2026-03-11 22:19:04,417 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=360.3MB, ahead=12.2s
+2026-03-11 22:19:04,435 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=360.4MB, ahead=12.2s
+2026-03-11 22:19:04,474 - 338711 - MainProcess - INFO - VIDEO_REQUEST: POST /api/video/status/h7yxl9gcu from 192.168.0.2
+2026-03-11 22:19:04,479 - 338711 - MainProcess - INFO - DEBUG_BUFFER: session=h7yxl9gcu, ahead=12.727688
+2026-03-11 22:19:04,741 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=362.6MB, ahead=12.7s
+2026-03-11 22:19:05,053 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=12.7s
+2026-03-11 22:19:05,054 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=144760, took=0.000s
+2026-03-11 22:19:05,055 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:19:05,055 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=12.7s, len=144760, target=7864320, elapsed=0.002s, sleep_sec=0.016s
+2026-03-11 22:19:05,098 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=365.1MB, ahead=12.7s
+2026-03-11 22:19:05,124 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=365.3MB, ahead=12.7s
+2026-03-11 22:19:05,786 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=370.1MB, ahead=12.7s
+2026-03-11 22:19:05,804 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=370.2MB, ahead=12.7s
+2026-03-11 22:19:05,823 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=370.4MB, ahead=12.7s
+2026-03-11 22:19:06,133 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=372.6MB, ahead=12.7s
+2026-03-11 22:19:06,231 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=12.7s
+2026-03-11 22:19:06,232 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=141532, took=0.001s
+2026-03-11 22:19:06,233 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:19:06,234 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=12.7s, len=141532, target=7864320, elapsed=0.002s, sleep_sec=0.016s
+2026-03-11 22:19:06,473 - 338711 - MainProcess - INFO - VIDEO_REQUEST: POST /api/video/status/h7yxl9gcu from 192.168.0.2
+2026-03-11 22:19:06,476 - 338711 - MainProcess - INFO - DEBUG_BUFFER: session=h7yxl9gcu, ahead=12.911688000000005
+2026-03-11 22:19:06,494 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=375.2MB, ahead=12.7s
+2026-03-11 22:19:06,520 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=375.4MB, ahead=12.9s
+2026-03-11 22:19:07,178 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=380.0MB, ahead=12.9s
+2026-03-11 22:19:07,188 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=380.1MB, ahead=12.9s
+2026-03-11 22:19:07,197 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=380.1MB, ahead=12.9s
+2026-03-11 22:19:07,219 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=380.3MB, ahead=12.9s
+2026-03-11 22:19:07,238 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=380.4MB, ahead=12.9s
+2026-03-11 22:19:07,283 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=12.9s
+2026-03-11 22:19:07,284 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=146640, took=0.001s
+2026-03-11 22:19:07,285 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:19:07,286 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=12.9s, len=146640, target=7864320, elapsed=0.005s, sleep_sec=0.014s
+2026-03-11 22:19:07,552 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=382.6MB, ahead=12.9s
+2026-03-11 22:19:07,892 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=385.0MB, ahead=12.9s
+2026-03-11 22:19:07,918 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=385.2MB, ahead=12.9s
+2026-03-11 22:19:07,943 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=385.4MB, ahead=12.9s
+2026-03-11 22:19:08,306 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=12.9s
+2026-03-11 22:19:08,307 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=135736, took=0.000s
+2026-03-11 22:19:08,307 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:19:08,308 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=12.9s, len=135736, target=7864320, elapsed=0.002s, sleep_sec=0.016s
+2026-03-11 22:19:08,490 - 338711 - MainProcess - INFO - VIDEO_REQUEST: POST /api/video/status/h7yxl9gcu from 192.168.0.2
+2026-03-11 22:19:08,495 - 338711 - MainProcess - INFO - DEBUG_BUFFER: session=h7yxl9gcu, ahead=15.434020999999994
+2026-03-11 22:19:08,606 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=390.1MB, ahead=15.4s
+2026-03-11 22:19:08,628 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=390.3MB, ahead=15.4s
+2026-03-11 22:19:08,647 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=390.4MB, ahead=15.4s
+2026-03-11 22:19:08,990 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=392.8MB, ahead=15.4s
+2026-03-11 22:19:09,293 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=15.4s
+2026-03-11 22:19:09,294 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=142240, took=0.001s
+2026-03-11 22:19:09,297 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:19:09,297 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=15.4s, len=142240, target=7864320, elapsed=0.006s, sleep_sec=0.012s
+2026-03-11 22:19:09,311 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=395.1MB, ahead=15.4s
+2026-03-11 22:19:09,328 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=395.2MB, ahead=15.4s
+2026-03-11 22:19:09,347 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=395.3MB, ahead=15.4s
+2026-03-11 22:19:10,010 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=400.0MB, ahead=15.4s
+2026-03-11 22:19:10,030 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=400.2MB, ahead=15.4s
+2026-03-11 22:19:10,054 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=400.3MB, ahead=15.4s
+2026-03-11 22:19:10,073 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=400.5MB, ahead=15.4s
+2026-03-11 22:19:10,331 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=15.4s
+2026-03-11 22:19:10,331 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=155288, took=0.000s
+2026-03-11 22:19:10,331 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:19:10,331 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=15.4s, len=155288, target=7864320, elapsed=0.001s, sleep_sec=0.019s
+2026-03-11 22:19:10,412 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=402.9MB, ahead=15.4s
+2026-03-11 22:19:10,476 - 338711 - MainProcess - INFO - VIDEO_REQUEST: POST /api/video/status/h7yxl9gcu from 192.168.0.2
+2026-03-11 22:19:10,478 - 338711 - MainProcess - INFO - DEBUG_BUFFER: session=h7yxl9gcu, ahead=18.807353999999997
+2026-03-11 22:19:10,715 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=405.1MB, ahead=18.8s
+2026-03-11 22:19:10,735 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=405.2MB, ahead=18.8s
+2026-03-11 22:19:10,759 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=405.4MB, ahead=18.8s
+2026-03-11 22:19:11,341 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=18.8s
+2026-03-11 22:19:11,342 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=135284, took=0.000s
+2026-03-11 22:19:11,342 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:19:11,342 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=18.8s, len=135284, target=7864320, elapsed=0.002s, sleep_sec=0.016s
+2026-03-11 22:19:11,436 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=410.2MB, ahead=18.8s
+2026-03-11 22:19:11,456 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=410.3MB, ahead=18.8s
+2026-03-11 22:19:11,480 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=410.5MB, ahead=18.8s
+2026-03-11 22:19:11,825 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=412.9MB, ahead=18.8s
+2026-03-11 22:19:12,131 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=415.1MB, ahead=18.8s
+2026-03-11 22:19:12,150 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=415.3MB, ahead=18.8s
+2026-03-11 22:19:12,174 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=415.4MB, ahead=18.8s
+2026-03-11 22:19:12,362 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=18.8s
+2026-03-11 22:19:12,363 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=181984, took=0.001s
+2026-03-11 22:19:12,364 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:19:12,364 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=18.8s, len=181984, target=7864320, elapsed=0.003s, sleep_sec=0.021s
+2026-03-11 22:19:12,477 - 338711 - MainProcess - INFO - VIDEO_REQUEST: POST /api/video/status/h7yxl9gcu from 192.168.0.2
+2026-03-11 22:19:12,481 - 338711 - MainProcess - INFO - DEBUG_BUFFER: session=h7yxl9gcu, ahead=19.693354
+2026-03-11 22:19:12,828 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=420.1MB, ahead=19.7s
+2026-03-11 22:19:12,861 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=420.2MB, ahead=19.7s
+2026-03-11 22:19:12,870 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=420.3MB, ahead=19.7s
+2026-03-11 22:19:12,871 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=420.3MB, ahead=19.7s
+2026-03-11 22:19:12,876 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=420.3MB, ahead=19.7s
+2026-03-11 22:19:12,899 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=420.5MB, ahead=19.7s
+2026-03-11 22:19:13,258 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=423.0MB, ahead=19.7s
+2026-03-11 22:19:13,321 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=19.7s
+2026-03-11 22:19:13,321 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=131336, took=0.000s
+2026-03-11 22:19:13,322 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:19:13,322 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=19.7s, len=131336, target=7864320, elapsed=0.003s, sleep_sec=0.014s
+2026-03-11 22:19:13,555 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=425.1MB, ahead=19.7s
+2026-03-11 22:19:13,573 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=425.2MB, ahead=19.7s
+2026-03-11 22:19:13,598 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=425.4MB, ahead=19.7s
+2026-03-11 22:19:14,255 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=430.1MB, ahead=19.7s
+2026-03-11 22:19:14,281 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=430.3MB, ahead=19.7s
+2026-03-11 22:19:14,306 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=430.5MB, ahead=19.7s
+2026-03-11 22:19:14,424 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=19.7s
+2026-03-11 22:19:14,425 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=139424, took=0.001s
+2026-03-11 22:19:14,426 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:19:14,426 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=19.7s, len=139424, target=7864320, elapsed=0.002s, sleep_sec=0.016s
+2026-03-11 22:19:14,475 - 338711 - MainProcess - INFO - VIDEO_REQUEST: POST /api/video/status/h7yxl9gcu from 192.168.0.2
+2026-03-11 22:19:14,477 - 338711 - MainProcess - INFO - DEBUG_BUFFER: session=h7yxl9gcu, ahead=23.076354000000002
+2026-03-11 22:19:14,664 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=433.1MB, ahead=23.1s
+2026-03-11 22:19:14,942 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=435.1MB, ahead=23.1s
+2026-03-11 22:19:14,967 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=435.2MB, ahead=23.1s
+2026-03-11 22:19:14,993 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=435.4MB, ahead=23.1s
+2026-03-11 22:19:15,637 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=440.1MB, ahead=23.1s
+2026-03-11 22:19:15,663 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=440.2MB, ahead=23.1s
+2026-03-11 22:19:15,664 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=23.1s
+2026-03-11 22:19:15,666 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=133256, took=0.001s
+2026-03-11 22:19:15,666 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:19:15,667 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=23.1s, len=133256, target=7864320, elapsed=0.004s, sleep_sec=0.013s
+2026-03-11 22:19:15,681 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=440.4MB, ahead=23.1s
+2026-03-11 22:19:16,077 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=443.2MB, ahead=23.1s
+2026-03-11 22:19:16,326 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=445.0MB, ahead=23.1s
+2026-03-11 22:19:16,351 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=445.2MB, ahead=23.1s
+2026-03-11 22:19:16,377 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=445.4MB, ahead=23.1s
+2026-03-11 22:19:16,473 - 338711 - MainProcess - INFO - VIDEO_REQUEST: POST /api/video/status/h7yxl9gcu from 192.168.0.2
+2026-03-11 22:19:16,477 - 338711 - MainProcess - INFO - DEBUG_BUFFER: session=h7yxl9gcu, ahead=23.212877
+2026-03-11 22:19:16,905 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=23.2s
+2026-03-11 22:19:16,907 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=196608, took=0.001s
+2026-03-11 22:19:16,907 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:19:16,908 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=23.2s, len=196608, target=7864320, elapsed=0.003s, sleep_sec=0.022s
+2026-03-11 22:19:17,029 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=450.1MB, ahead=23.2s
+2026-03-11 22:19:17,055 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=450.3MB, ahead=23.2s
+2026-03-11 22:19:17,081 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=450.5MB, ahead=23.2s
+2026-03-11 22:19:17,469 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=453.2MB, ahead=23.2s
+2026-03-11 22:19:17,719 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=455.0MB, ahead=23.2s
+2026-03-11 22:19:17,737 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=455.2MB, ahead=23.2s
+2026-03-11 22:19:17,763 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=455.4MB, ahead=23.2s
+2026-03-11 22:19:18,128 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=23.2s
+2026-03-11 22:19:18,130 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=196608, took=0.001s
+2026-03-11 22:19:18,131 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:19:18,131 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=23.2s, len=196608, target=7864320, elapsed=0.004s, sleep_sec=0.021s
+2026-03-11 22:19:18,417 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=460.0MB, ahead=23.2s
+2026-03-11 22:19:18,443 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=460.2MB, ahead=23.2s
+2026-03-11 22:19:18,469 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=460.4MB, ahead=23.2s
+2026-03-11 22:19:18,478 - 338711 - MainProcess - INFO - VIDEO_REQUEST: POST /api/video/status/h7yxl9gcu from 192.168.0.2
+2026-03-11 22:19:18,481 - 338711 - MainProcess - INFO - DEBUG_BUFFER: session=h7yxl9gcu, ahead=22.284354
+2026-03-11 22:19:18,864 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=463.3MB, ahead=22.3s
+2026-03-11 22:19:19,117 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=465.1MB, ahead=22.3s
+2026-03-11 22:19:19,143 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=465.3MB, ahead=22.3s
+2026-03-11 22:19:19,168 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=465.4MB, ahead=22.3s
+2026-03-11 22:19:19,359 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=22.3s
+2026-03-11 22:19:19,360 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=196608, took=0.001s
+2026-03-11 22:19:19,361 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:19:19,362 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=22.3s, len=196608, target=7864320, elapsed=0.003s, sleep_sec=0.022s
+2026-03-11 22:19:19,824 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=470.2MB, ahead=22.3s
+2026-03-11 22:19:19,850 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=470.4MB, ahead=22.3s
+2026-03-11 22:19:20,271 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=473.4MB, ahead=22.3s
+2026-03-11 22:19:20,480 - 338711 - MainProcess - INFO - VIDEO_REQUEST: POST /api/video/status/h7yxl9gcu from 192.168.0.2
+2026-03-11 22:19:20,483 - 338711 - MainProcess - INFO - DEBUG_BUFFER: session=h7yxl9gcu, ahead=21.025502000000003
+2026-03-11 22:19:20,523 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=475.2MB, ahead=21.0s
+2026-03-11 22:19:20,548 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=475.4MB, ahead=21.0s
+2026-03-11 22:19:20,595 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=21.0s
+2026-03-11 22:19:20,597 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=196608, took=0.001s
+2026-03-11 22:19:20,597 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:19:20,598 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=21.0s, len=196608, target=7864320, elapsed=0.004s, sleep_sec=0.021s
+2026-03-11 22:19:21,203 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=480.1MB, ahead=21.0s
+2026-03-11 22:19:21,229 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=480.3MB, ahead=21.0s
+2026-03-11 22:19:21,254 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=480.5MB, ahead=21.0s
+2026-03-11 22:19:21,661 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=483.4MB, ahead=21.0s
+2026-03-11 22:19:21,860 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=21.0s
+2026-03-11 22:19:21,861 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=196608, took=0.001s
+2026-03-11 22:19:21,861 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:19:21,862 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=21.0s, len=196608, target=7864320, elapsed=0.002s, sleep_sec=0.023s
+2026-03-11 22:19:21,911 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=485.2MB, ahead=21.0s
+2026-03-11 22:19:21,937 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=485.4MB, ahead=21.0s
+2026-03-11 22:19:22,477 - 338711 - MainProcess - INFO - VIDEO_REQUEST: POST /api/video/status/h7yxl9gcu from 192.168.0.2
+2026-03-11 22:19:22,481 - 338711 - MainProcess - INFO - DEBUG_BUFFER: session=h7yxl9gcu, ahead=20.097688000000005
+2026-03-11 22:19:22,594 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=490.1MB, ahead=20.1s
+2026-03-11 22:19:22,619 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=490.3MB, ahead=20.1s
+2026-03-11 22:19:22,645 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=490.5MB, ahead=20.1s
+2026-03-11 22:19:23,050 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=493.4MB, ahead=20.1s
+2026-03-11 22:19:23,103 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=20.1s
+2026-03-11 22:19:23,105 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=161188, took=0.001s
+2026-03-11 22:19:23,105 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:19:23,106 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=20.1s, len=161188, target=7864320, elapsed=0.004s, sleep_sec=0.017s
+2026-03-11 22:19:23,277 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=495.0MB, ahead=20.1s
+2026-03-11 22:19:23,296 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=495.2MB, ahead=20.1s
+2026-03-11 22:19:23,321 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=495.3MB, ahead=20.1s
+2026-03-11 22:19:23,976 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=500.1MB, ahead=20.1s
+2026-03-11 22:19:24,002 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=500.2MB, ahead=20.1s
+2026-03-11 22:19:24,027 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=500.4MB, ahead=20.1s
+2026-03-11 22:19:24,348 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=20.1s
+2026-03-11 22:19:24,349 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=145288, took=0.001s
+2026-03-11 22:19:24,350 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:19:24,350 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=20.1s, len=145288, target=7864320, elapsed=0.002s, sleep_sec=0.016s
+2026-03-11 22:19:24,444 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=503.4MB, ahead=20.1s
+2026-03-11 22:19:24,472 - 338711 - MainProcess - INFO - VIDEO_REQUEST: POST /api/video/status/h7yxl9gcu from 192.168.0.2
+2026-03-11 22:19:24,475 - 338711 - MainProcess - INFO - DEBUG_BUFFER: session=h7yxl9gcu, ahead=19.413714
+2026-03-11 22:19:24,665 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=505.0MB, ahead=19.4s
+2026-03-11 22:19:24,692 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=505.2MB, ahead=19.4s
+2026-03-11 22:19:24,716 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=505.4MB, ahead=19.4s
+2026-03-11 22:19:25,359 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=510.0MB, ahead=19.4s
+2026-03-11 22:19:25,385 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=510.2MB, ahead=19.4s
+2026-03-11 22:19:25,410 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=510.4MB, ahead=19.4s
+2026-03-11 22:19:25,583 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=19.4s
+2026-03-11 22:19:25,584 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=196608, took=0.001s
+2026-03-11 22:19:25,585 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:19:25,585 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=19.4s, len=196608, target=7864320, elapsed=0.004s, sleep_sec=0.021s
+2026-03-11 22:19:25,840 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=513.5MB, ahead=19.4s
+2026-03-11 22:19:26,078 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=515.2MB, ahead=19.4s
+2026-03-11 22:19:26,098 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=515.3MB, ahead=19.4s
+2026-03-11 22:19:26,117 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=515.4MB, ahead=19.4s
+2026-03-11 22:19:26,485 - 338711 - MainProcess - INFO - VIDEO_REQUEST: POST /api/video/status/h7yxl9gcu from 192.168.0.2
+2026-03-11 22:19:26,490 - 338711 - MainProcess - INFO - DEBUG_BUFFER: session=h7yxl9gcu, ahead=18.59435400000001
+2026-03-11 22:19:26,667 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=18.6s
+2026-03-11 22:19:26,668 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=188864, took=0.001s
+2026-03-11 22:19:26,669 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:19:26,670 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=18.6s, len=188864, target=7864320, elapsed=0.002s, sleep_sec=0.022s
+2026-03-11 22:19:26,775 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=520.1MB, ahead=18.6s
+2026-03-11 22:19:26,794 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=520.2MB, ahead=18.6s
+2026-03-11 22:19:26,817 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=520.4MB, ahead=18.6s
+2026-03-11 22:19:27,272 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=523.6MB, ahead=18.6s
+2026-03-11 22:19:27,479 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=525.1MB, ahead=18.6s
+2026-03-11 22:19:27,502 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=525.2MB, ahead=18.6s
+2026-03-11 22:19:27,522 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=525.4MB, ahead=18.6s
+2026-03-11 22:19:27,776 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=18.6s
+2026-03-11 22:19:27,776 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=147804, took=0.001s
+2026-03-11 22:19:27,777 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:19:27,778 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=18.6s, len=147804, target=7864320, elapsed=0.003s, sleep_sec=0.016s
+2026-03-11 22:19:28,187 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=530.1MB, ahead=18.6s
+2026-03-11 22:19:28,207 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=530.2MB, ahead=18.6s
+2026-03-11 22:19:28,229 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=530.4MB, ahead=18.6s
+2026-03-11 22:19:28,480 - 338711 - MainProcess - INFO - VIDEO_REQUEST: POST /api/video/status/h7yxl9gcu from 192.168.0.2
+2026-03-11 22:19:28,483 - 338711 - MainProcess - INFO - DEBUG_BUFFER: session=h7yxl9gcu, ahead=21.072097
+2026-03-11 22:19:28,682 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=533.6MB, ahead=21.1s
+2026-03-11 22:19:28,850 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=21.1s
+2026-03-11 22:19:28,852 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=188376, took=0.001s
+2026-03-11 22:19:28,852 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:19:28,853 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=21.1s, len=188376, target=7864320, elapsed=0.002s, sleep_sec=0.022s
+2026-03-11 22:19:28,899 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=535.2MB, ahead=21.1s
+2026-03-11 22:19:28,925 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=535.3MB, ahead=21.1s
+2026-03-11 22:19:28,946 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=535.5MB, ahead=21.1s
+2026-03-11 22:19:29,587 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=540.1MB, ahead=21.1s
+2026-03-11 22:19:29,612 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=540.3MB, ahead=21.1s
+2026-03-11 22:19:29,637 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=540.5MB, ahead=21.1s
+2026-03-11 22:19:30,012 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=21.1s
+2026-03-11 22:19:30,014 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=193452, took=0.001s
+2026-03-11 22:19:30,015 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:19:30,015 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=21.1s, len=193452, target=7864320, elapsed=0.005s, sleep_sec=0.019s
+2026-03-11 22:19:30,085 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=543.7MB, ahead=21.1s
+2026-03-11 22:19:30,264 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=545.0MB, ahead=21.1s
+2026-03-11 22:19:30,290 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=545.2MB, ahead=21.1s
+2026-03-11 22:19:30,314 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=545.4MB, ahead=21.1s
+2026-03-11 22:19:30,483 - 338711 - MainProcess - INFO - VIDEO_REQUEST: POST /api/video/status/h7yxl9gcu from 192.168.0.2
+2026-03-11 22:19:30,487 - 338711 - MainProcess - INFO - DEBUG_BUFFER: session=h7yxl9gcu, ahead=20.759354000000002
+2026-03-11 22:19:30,961 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=550.0MB, ahead=20.8s
+2026-03-11 22:19:30,984 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=550.2MB, ahead=20.8s
+2026-03-11 22:19:31,010 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=550.4MB, ahead=20.8s
+2026-03-11 22:19:31,185 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=20.8s
+2026-03-11 22:19:31,186 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=180068, took=0.001s
+2026-03-11 22:19:31,187 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:19:31,187 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=20.8s, len=180068, target=7864320, elapsed=0.002s, sleep_sec=0.021s
+2026-03-11 22:19:31,483 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=553.8MB, ahead=20.8s
+2026-03-11 22:19:31,659 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=555.0MB, ahead=20.8s
+2026-03-11 22:19:31,684 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=555.2MB, ahead=20.8s
+2026-03-11 22:19:31,703 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=555.3MB, ahead=20.8s
+2026-03-11 22:19:32,333 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_start, ahead=20.8s
+2026-03-11 22:19:32,334 - 338711 - MainProcess - INFO - TRACE_READ: session=h7yxl9gcu, step=read_end, size=155988, took=0.001s
+2026-03-11 22:19:32,335 - 338711 - MainProcess - INFO - TRACE_YIELD: session=h7yxl9gcu, step=yield_end, took=0.000s
+2026-03-11 22:19:32,336 - 338711 - MainProcess - INFO - DEBUG_THROTTLE: mode=BOOST-60M, ahead=20.8s, len=155988, target=7864320, elapsed=0.004s, sleep_sec=0.016s
+2026-03-11 22:19:32,353 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=560.0MB, ahead=20.8s
+2026-03-11 22:19:32,379 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=560.2MB, ahead=20.8s
+2026-03-11 22:19:32,401 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, mode=BOOST-60M, sent=560.4MB, ahead=20.8s
+2026-03-11 22:19:32,476 - 338711 - MainProcess - INFO - VIDEO_REQUEST: POST /api/video/status/h7yxl9gcu from 192.168.0.2
+2026-03-11 22:19:32,477 - 338711 - MainProcess - INFO - DEBUG_BUFFER: session=h7yxl9gcu, ahead=21.39668800000001
+2026-03-11 22:19:32,611 - 338711 - MainProcess - INFO - Streaming task cancelled for session h7yxl9gcu (Client likely closed)
+2026-03-11 22:19:32,611 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, ENTERING FINALLY. reason=task_cancelled, FFmpeg exited: False
+2026-03-11 22:19:32,612 - 338711 - MainProcess - INFO - DEBUG_LOOP: session=h7yxl9gcu, killing FFmpeg (PID 338724)
+2026-03-11 22:19:32,628 - 338711 - MainProcess - INFO - FFMPEG_STDERR (PID 338724) reached EOF
+2026-03-11 22:19:34,481 - 338711 - MainProcess - INFO - VIDEO_REQUEST: POST /api/video/status/h7yxl9gcu from 192.168.0.2
+2026-03-11 22:19:34,484 - 338711 - MainProcess - INFO - DEBUG_BUFFER: session=h7yxl9gcu, ahead=19.438021000000006
+2026-03-11 22:19:36,478 - 338711 - MainProcess - INFO - VIDEO_REQUEST: POST /api/video/status/h7yxl9gcu from 192.168.0.2
+2026-03-11 22:19:36,481 - 338711 - MainProcess - INFO - DEBUG_BUFFER: session=h7yxl9gcu, ahead=17.318021
+2026-03-11 22:19:38,475 - 338711 - MainProcess - INFO - VIDEO_REQUEST: POST /api/video/status/h7yxl9gcu from 192.168.0.2
+2026-03-11 22:19:38,478 - 338711 - MainProcess - INFO - DEBUG_BUFFER: session=h7yxl9gcu, ahead=15.459354000000005
+2026-03-11 22:19:40,482 - 338711 - MainProcess - INFO - VIDEO_REQUEST: POST /api/video/status/h7yxl9gcu from 192.168.0.2
+2026-03-11 22:19:40,485 - 338711 - MainProcess - INFO - DEBUG_BUFFER: session=h7yxl9gcu, ahead=13.339354

@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+sqlalchemy
+pydantic
+requests
+python-multipart
+schedule
+psutil
+python-dotenv
+ariblib
+google-genai
+paramiko
+jinja2
+aiofiles
+httpx

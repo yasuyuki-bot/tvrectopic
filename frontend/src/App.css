@@ -1,0 +1,56 @@
+#root {
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Bottom navigation padding for content */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.mb-nav-height {
+  margin-bottom: 70px; /* Base height + padding */
+}
+
+@media (max-width: 767px) {
+  .mobile-hide {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .desktop-hide {
+    display: none !important;
+  }
+}
+
+/* Landscape orientation on mobile devices */
+@media (max-width: 960px) and (orientation: landscape) {
+  .landscape-fullscreen {
+    padding: 0 !important;
+    height: 100vh !important;
+    max-height: 100vh !important;
+    border-radius: 0 !important;
+    border: none !important;
+  }
+  
+  .landscape-hide {
+    display: none !important;
+  }
+
+  .landscape-compact-p {
+    padding: 0.25rem 0.5rem !important;
+  }
+
+  .landscape-compact-gap {
+    gap: 0.25rem !important;
+  }
+
+  .landscape-inline-flex {
+    display: inline-flex !important;
+  }
+}

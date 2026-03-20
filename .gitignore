@@ -1,0 +1,77 @@
+### 1. Language & Platform Defaults ###
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# Node
+node_modules/
+
+# OS specific
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+
+### 2. Built Artifacts & Environment ###
+# Virtual Environments
+venv/
+.env
+
+# Built frontend files
+dist/
+
+# Built binary folders
+cap/
+
+# Specific binary artifacts
+cap_src/Caption2Ass
+cap_src/src/**/*.o
+
+# Archives & ZIPs
+*.zip
+*.tar.gz
+
+
+### 3. Local Data & Sensitive Files ###
+# Database files (Active/Local)
+*.db
+*.db-shm
+*.db-wal
+
+# Local settings (Private API keys/Paths)
+backend/settings.json
+backend/app.log
+backend/ffmpeg_*.log
+temp_hls/
+
+
+### 4. Development & Maintenance Scripts ###
+# Archive for unnecessary scripts
+削除/
+testdata/
+temp_verification/
+
+# Deployment & Utility scripts (Excluded from main source)
+create_deploy_zip.py
+fetch_channels.py
+dump_db.py
+kill_remote_ffmpeg.py
+reset_subtitle_status.py
+restart_service.py
+
+# Mass exclusion of ad-hoc scripts
+test_*.py
+analyze_*.py
+examine_*.py
+diagnose_*.py
+apply_*.py
+delete_*.py
+add_*.py
+update_*.py
+view_*.py
+
+# Personal notes
+めも.txt
