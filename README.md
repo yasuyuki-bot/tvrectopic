@@ -73,6 +73,32 @@ sudo systemctl enable --now tvrectopic
 ### 4. トピックタブ
 - **2. Gemini API キー**: トピック自動抽出を利用するには、Google AI Studio で取得した API キーを「トピック」タブ内の「2. Gemini API キー」に入力して保存してください。
 
+## アップデート手順
+最新版に更新する場合は、以下のコマンドを順に実行してください。
+既存の設定ファイル（settings.json）およびデータベースファイル（*.db）は保持され、プログラムのみが更新されます。
+
+```bash
+cd tvrectopic
+git pull
+./install_ubuntu.sh
+sudo systemctl restart tvrectopic
+```
+
+## アンインストール手順
+すべての関連コンポーネントを削除する場合は、以下の手順を実行してください。
+
+1. **サービスの停止と削除**:
+```bash
+sudo systemctl stop tvrectopic
+sudo systemctl disable tvrectopic
+sudo rm /etc/systemd/system/tvrectopic.service
+sudo systemctl daemon-reload
+```
+
+2. **ディレクトリの削除**:
+プロジェクトフォルダを削除してください。
+※ 録画ファイル（`settings.json` の `recording_folder`）を保持したい場合は、そこだけ残して削除してください。
+
 ## ライセンス
 本プロジェクトは **GNU General Public License v3.0 (GPLv3)** の下で公開されています。
 詳細は [LICENSE](file:///c:/Users/rujas/Documents/GitHub/tvrectopic/LICENSE) ファイルを参照してください。
