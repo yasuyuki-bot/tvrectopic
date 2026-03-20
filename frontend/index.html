@@ -12,6 +12,15 @@
     window.__onGCastApiAvailable = function (isAvailable) {
       console.log("Google Cast SDK Callback: isAvailable =", isAvailable);
     };
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').then(reg => {
+          console.log('SW registered:', reg);
+        }).catch(err => {
+          console.log('SW registration failed:', err);
+        });
+      });
+    }
   </script>
   <script src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js?loadCastFramework=1"></script>
   <title>TVrecTopic</title>
