@@ -43,8 +43,7 @@ cap_src/src/**/*.o
 
 # Local settings (Private API keys/Paths)
 backend/settings.json
-backend/app.log
-backend/ffmpeg_*.log
+backend/*.log
 temp_hls/
 
 

@@ -14,20 +14,7 @@
 
 ## Linux インストール手順
 
-### 1. リポジトリのクローン
-```bash
-git clone https://github.com/yasuyuki-bot/tvrectopic.git
-cd tvrectopic
-```
-
-### 2. インストールスクリプトの実行
-```bash
-chmod +x install_ubuntu.sh
-./install_ubuntu.sh
-```
-※ スクリプトは Node.js、Python venv、依存ライブラリのインストール、フロントエンドのビルド、systemd サービスの設定（`tvrectopic.service`）を自動で行います。
-
-### 3. チューナー・外部ツールの設定
+### 1. 事前準備（チューナー・外部ツールの設定）
 録画、視聴および番組情報の取得には、以下の外部ツールが必要です。事前にインストールし、パスを通しておいてください。
 `recdvb` または `recpt1` のいずれかを環境に合わせてインストールしてください。
 以下のツールで動作確認を行っています：
@@ -36,6 +23,19 @@ chmod +x install_ubuntu.sh
 - **recpt1**: [https://github.com/stz2012/recpt1](https://github.com/stz2012/recpt1)
 - **epgdump**: [https://github.com/Piro77/epgdump](https://github.com/Piro77/epgdump)
 - **Caption2Ass**: 字幕抽出に使用（[https://github.com/iGlitch/Caption2Ass](https://github.com/iGlitch/Caption2Ass) を Linux 用に改変して同梱）
+
+### 2. リポジトリのクローン
+```bash
+git clone https://github.com/yasuyuki-bot/tvrectopic.git
+cd tvrectopic
+```
+
+### 3. インストールスクリプトの実行
+```bash
+chmod +x install_ubuntu.sh
+./install_ubuntu.sh
+```
+※ スクリプトは Node.js、Python venv、依存ライブラリのインストール、フロントエンドのビルド、systemd サービスの設定（`tvrectopic.service`）を自動で行います。
 
 ### 4. サービスの管理
 以下のコマンドで、OS 起動時に自動でサービスが開始されるように登録し、起動します：
