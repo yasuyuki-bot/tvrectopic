@@ -73,13 +73,6 @@ sudo systemctl enable --now tvrectopic
 ### 4. トピックタブ
 - **2. Gemini API キー**: トピック自動抽出を利用するには、Google AI Studio で取得した API キーを「トピック」タブ内の「2. Gemini API キー」に入力して保存してください。
 
-## 外部ツールのライセンス
-本プロジェクトで使用している外部ツールのライセンスは以下の通りです：
-- **recdvb**: GPLv3
-- **recpt1**: GPLv3
-- **epgdump**: GPLv2
-- **Caption2Ass**: 免責事項あり（本プロジェクトでは Linux 用改変版を同梱）
-
 ## ライセンス
 本プロジェクトは **GNU General Public License v3.0 (GPLv3)** の下で公開されています。
 詳細は [LICENSE](file:///c:/Users/rujas/Documents/GitHub/tvrectopic/LICENSE) ファイルを参照してください。
