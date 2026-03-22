@@ -70,6 +70,7 @@ apply_*.py
 delete_*.py
 add_*.py
 update_*.py
+!backend/update_epg.py
 view_*.py
 
 # Personal notes

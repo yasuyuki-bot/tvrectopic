@@ -14,10 +14,10 @@ from ..logger_config import get_logger
 
 logger = get_logger(__name__, "app.log")
 
-# Find the absolute path to the directory containing the 'backend' package
-PACKAGE_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+# Find the absolute path using realpath to resolve symlinks
+PACKAGE_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
 # BASE_DIR is the 'backend' directory
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
 
 # Global to track the running EPG update process
 active_epg_process = None
@@ -75,6 +75,18 @@ def update_epg_endpoint(background_tasks: BackgroundTasks, type: Optional[str] =
             with open(log_path, "a", encoding="utf-8") as f:
                 f.write(f"\n--- EPG Update Started at {datetime.now()} (Manual) ---\n")
                 f.write(f"Command: {cmd}\n")
+                f.write(f"CWD: {PACKAGE_ROOT}\n")
+                
+                # Diagnostics to find why module is not found
+                ppath = PACKAGE_ROOT
+                if "PYTHONPATH" in os.environ:
+                    ppath = PACKAGE_ROOT + os.pathsep + os.environ["PYTHONPATH"]
+                f.write(f"PYTHONPATH: {ppath}\n")
+                
+                backend_exists = os.path.exists(os.path.join(PACKAGE_ROOT, "backend"))
+                init_exists = os.path.exists(os.path.join(PACKAGE_ROOT, "backend", "__init__.py"))
+                f.write(f"Backend directory exists: {backend_exists}\n")
+                f.write(f"Backend __init__.py exists: {init_exists}\n")
                 f.flush()
                 
                 # Start as process group on Linux to kill children (rec tuner commands)
@@ -84,9 +96,9 @@ def update_epg_endpoint(background_tasks: BackgroundTasks, type: Optional[str] =
                 
                 # Ensure PACKAGE_ROOT is in PYTHONPATH for module imports
                 env = os.environ.copy()
-                env["PYTHONPATH"] = PACKAGE_ROOT + os.pathsep + env.get("PYTHONPATH", "")
+                env["PYTHONPATH"] = ppath
                 
-                logger.info(f"Starting EPG update process with PYTHONPATH={PACKAGE_ROOT}")
+                logger.info(f"Starting EPG update process with PYTHONPATH={ppath}")
                 active_epg_process = subprocess.Popen(
                     cmd, cwd=PACKAGE_ROOT, stdout=f, stderr=f, env=env, **kwargs
                 )
