@@ -359,12 +359,15 @@ def update_loop():
                     last_epg_run[run_key] = True
                     
                     # Use -m to run as a module to fix import errors on Linux
-                    # We expect our current executable's folder to contain the 'backend' package
-                    # or be runnable from the current working directory.
                     # Project root is parent of backend/
-                    proj_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+                    backend_dir = os.path.dirname(os.path.realpath(__file__))
+                    proj_root = os.path.dirname(backend_dir)
+                    epg_log_path = os.path.join(backend_dir, "epg_update.log")
+                    
                     cmd = [sys.executable, "-m", "backend.update_epg"]
-                    subprocess.run(cmd, cwd=proj_root)
+                    with open(epg_log_path, "a", encoding="utf-8") as f:
+                        f.write(f"\n--- Scheduled EPG Update Started at {datetime.now()} ---\n")
+                        subprocess.run(cmd, cwd=proj_root, stdout=f, stderr=f)
                     time.sleep(60)
 
             # 2. Topic Updates

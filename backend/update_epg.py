@@ -21,8 +21,9 @@ except (ImportError, ValueError):
     from epg_modules.db_saver import load_channels, update_channel_map, save_programs, cleanup_old_epg
     from logger_config import get_logger
 
-# Configure the root logger so all sub-modules (epg_modules etc.) log to the same file
-logger = get_logger("backend", "epg_update.log", configure_root=True)
+# Configure the root logger to output to stdout/stderr.
+# The parent process (epg.py or scheduler) will handle capturing this output to a file.
+logger = get_logger("backend", configure_root=True)
 # Also get a specific logger for this module for clear identification in logs
 module_logger = logger.getChild("update_epg")
 
