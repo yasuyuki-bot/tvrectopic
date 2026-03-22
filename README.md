@@ -104,3 +104,7 @@ sudo systemctl daemon-reload
 詳細は [LICENSE](file:///c:/Users/rujas/Documents/GitHub/tvrectopic/LICENSE) ファイルを参照してください。
 
 GPLv3 を適用しているため、本コードを改変して配布・公開する場合は、同じ GPLv3 ライセンスの下でソースコードを公開する必要があります。
+
+## 履歴
+2026/3/22
+・update_epg.py がUPできておらずepg更新できなかったため、UP
