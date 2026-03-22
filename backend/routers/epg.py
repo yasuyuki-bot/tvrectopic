@@ -71,7 +71,7 @@ def update_epg_endpoint(background_tasks: BackgroundTasks, type: Optional[str] =
             if type:
                 cmd.append(type)
             
-            log_path = os.path.join(os.path.dirname(__file__), "epg_update.log")
+            log_path = os.path.join(BASE_DIR, "epg_update.log")
             with open(log_path, "a", encoding="utf-8") as f:
                 f.write(f"\n--- EPG Update Started at {datetime.now()} (Manual) ---\n")
                 f.write(f"Command: {cmd}\n")
@@ -82,13 +82,18 @@ def update_epg_endpoint(background_tasks: BackgroundTasks, type: Optional[str] =
                 if os.name != 'nt':
                     kwargs['preexec_fn'] = os.setsid
                 
+                # Ensure PACKAGE_ROOT is in PYTHONPATH for module imports
+                env = os.environ.copy()
+                env["PYTHONPATH"] = PACKAGE_ROOT + os.pathsep + env.get("PYTHONPATH", "")
+                
+                logger.info(f"Starting EPG update process with PYTHONPATH={PACKAGE_ROOT}")
                 active_epg_process = subprocess.Popen(
-                    cmd, cwd=PACKAGE_ROOT, stdout=f, stderr=f, **kwargs
+                    cmd, cwd=PACKAGE_ROOT, stdout=f, stderr=f, env=env, **kwargs
                 )
-                active_epg_process.wait()
-                f.write(f"\n--- EPG Update Finished/Terminated at {datetime.now()} ---\n")
+                exit_code = active_epg_process.wait()
+                f.write(f"\n--- EPG Update Finished/Terminated at {datetime.now()} (Exit Code: {exit_code}) ---\n")
 
-            logger.info("EPG Update script finished (checked epg_update.log).")
+            logger.info(f"EPG Update script finished with exit code {exit_code}.")
         except Exception as e:
             logger.error(f"EPG Update Error: {e}")
         finally:
