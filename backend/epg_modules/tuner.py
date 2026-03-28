@@ -1,5 +1,6 @@
 import threading
 import logging
+from datetime import datetime, timedelta
 
 try:
     from ..database import SessionLocal, ScheduledRecording
@@ -18,7 +19,15 @@ ACTIVE_SCANS = {
 def get_active_recording_counts():
     db = SessionLocal()
     try:
-        active_recs = db.query(ScheduledRecording).filter(ScheduledRecording.status == "recording").all()
+        now = datetime.now()
+        limit_time = now + timedelta(seconds=120)
+
+        active_recs = db.query(ScheduledRecording).filter(
+            ScheduledRecording.status.in_(["recording", "scheduled"]),
+            ScheduledRecording.start_time <= limit_time,
+            ScheduledRecording.end_time > now
+        ).all()
+        
         count_gr = 0
         count_bs = 0 
         
