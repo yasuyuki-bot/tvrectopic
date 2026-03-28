@@ -1,7 +1,7 @@
 import os
 import threading
 from datetime import datetime
-from typing import Optional, List
+from typing import Optional, List, Union
 from fastapi import APIRouter, HTTPException, Depends, BackgroundTasks
 from pydantic import BaseModel
 from sqlalchemy.orm import Session
@@ -266,7 +266,7 @@ def get_recorded_list(db: Session = Depends(get_db)):
     return crud_program.get_recorded_list(db)
 
 class BulkDeleteRequest(BaseModel):
-    ids: List[str]
+    ids: List[Union[str, int]]
     delete_file: bool = True
 
 @recorded_router.post("/bulk_delete")
@@ -274,7 +274,8 @@ def bulk_delete_recorded_programs(req: BulkDeleteRequest, background_tasks: Back
     deleted_files = []
     errors = []
     
-    for program_id_str in req.ids:
+    for item in req.ids:
+        program_id_str = str(item)
         try:
             # We reuse the logic from delete_recorded_program but for efficiency we might want to refactor it,
             # however for safety and code reuse, we'll implement the core deletion here.
