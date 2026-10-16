@@ -165,9 +165,9 @@ const AutoReservationView = ({ onEdit, onRefresh, refreshTrigger, mode, setMode 
                                                 <span className="text-[10px] opacity-70 uppercase">優先度:</span> {rule.priority ?? 5}
                                             </span>
                                             {rule.recording_folder && (
-                                                <span className="bg-purple-50 text-purple-700 px-2 py-0.5 rounded-md border border-purple-100 flex items-center gap-1 font-medium max-w-[200px] truncate" title={rule.recording_folder}>
-                                                    <Folder className="w-3 h-3 shrink-0" />
-                                                    <span className="truncate">{rule.recording_folder}</span>
+                                                <span className="bg-purple-50 text-purple-700 px-2 py-0.5 rounded-md border border-purple-100 flex items-center gap-1 font-medium break-all" title={rule.recording_folder}>
+                                                    <Folder className="w-3.5 h-3.5 shrink-0" />
+                                                    <span>{rule.recording_folder}</span>
                                                 </span>
                                             )}
                                         </div>
