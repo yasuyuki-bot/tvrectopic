@@ -143,6 +143,7 @@ const AutoReservationSettingsModal = ({ initialProgram, initialRule, onClose, on
                 search_target: searchTarget,
                 allow_duplicates: allowDuplicates,
                 priority: parseInt(priority) || 5,
+                recording_folder: folder ? folder.trim() : null,
                 active: true
             };
 
